@@ -1,0 +1,6 @@
+services:
+  extract-audio:
+    build: .
+    entrypoint: dumb-init youtube-dl --format "bestaudio"
+    volumes:
+      - ./files:/downloads
